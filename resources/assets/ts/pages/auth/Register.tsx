@@ -17,6 +17,7 @@ const Register = () => {
   const { errors } = usePage();
   const [isRobot, setIsRobot] = useState(true);
   const [sending, setSending] = useState(false);
+  const RECAPTCHA_SECRET_KEY = process.env.INVISIBLE_RECAPTCHA_SITEKEY;
   const [values, setValues] = useState({
     first_name: "",
     last_name: "",
@@ -63,7 +64,7 @@ const Register = () => {
   }
 
   return (
-    <GoogleReCaptchaProvider reCaptchaKey="6Le5TtYUAAAAAI8sNLAenhAcHFWmOrOUkrc_MweF">
+    <GoogleReCaptchaProvider reCaptchaKey={RECAPTCHA_SECRET_KEY}>
       <Seo title="Création de compte" />
       <GoogleReCaptcha
         onVerify={(token: string) => recaptchaVerifyCallback(token)}

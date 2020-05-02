@@ -50,7 +50,7 @@ class UserController extends Controller
 
         $data = [
             'response'  => $token,
-            'secret'    => '6Le5TtYUAAAAAGZHiAeVaApa4pZh8Ioecrpwpg3m',
+            'secret'    => env('INVISIBLE_RECAPTCHA_SECRETKEY', ''),
         ];
 
         $statusCode = 400;
