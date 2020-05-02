@@ -30,8 +30,7 @@ Communauté sur Meetup: A venir
 - Administration Dashboard fait avec [TailwindUI](https://tailwindui.com)
 
 ## Sidebar Admin Demo
-![Keen Bootstrap Admin Template](http://keenthemes.com/keen/themes/keen/doc/assets/img/demos/demo1-1.png "Keen Theme Browser Preview")
-
+- Design Soon
 
 ## Caracteristiques Serveur
 Pour pouvoir lancer Laravel Cameroun, vous devez répondre aux exigences suivantes:
@@ -79,6 +78,14 @@ $ npm run dev or yarn run dev
 9. Exécutez ces commandes pour créer les tables dans la base de données définie et remplir les données de départ (seed)
 ```
 $ php artisan migrate --seed
+```
+10. Activez les modules et executez les migrations et les seeders 
+```
+$ php artisan module:list
+Then
+$ php artisan module:enable <ModuleName>
+After run
+$ php artisan module:seed <ModuleName>
 ```
 
 ## Lancement
